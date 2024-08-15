@@ -6,7 +6,7 @@ Terraform module which creates VPC resources on AWS.
 
 ```hcl
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source = "app.terraform.io/mattspahr-sandbox/vpc/aws"
 
   name = "my-vpc"
   cidr = "10.0.0.0/16"
@@ -47,7 +47,7 @@ Then, pass the allocated IPs as a parameter to this module.
 
 ```hcl
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source = "app.terraform.io/mattspahr-sandbox/vpc/aws"
 
   # The rest of arguments are omitted for brevity
 
@@ -139,7 +139,7 @@ Prior to Terraform 0.13, you were unable to specify `count` in a module block. I
 ```hcl
 # This VPC will not be created
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source = "app.terraform.io/mattspahr-sandbox/vpc/aws"
 
   create_vpc = false
   # ... omitted
